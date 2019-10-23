@@ -66,7 +66,20 @@ remove file form git
     git rm --cached file
 
 
-## composer
+## Composer
 
-- composer dumpautoload -o
-- composer dump
+autoload
+
+    composer dumpautoload -o
+    composer dump
+
+## Linux
+
+skupina www-data
+
+    sudo chown -R $USER:www-data /var/www/html/path...
+
+control center (chybějící), settings not found
+
+    sudo apt install gnome-control-center
+  
