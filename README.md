@@ -78,6 +78,11 @@ autoload
 skupina www-data
 
     sudo chown -R $USER:www-data /var/www/html/path...
+    sudo chgrp -R www-data /var/www/html
+
+        - sudo chmod -R 2775 /var/www/html 
+        - sudo chmod -R 2755 /var/www/html
+
 
 control center (chybějící), settings not found
 
