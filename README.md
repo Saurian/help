@@ -55,10 +55,21 @@ prod    dev   git
     - ssh -i /home/pavel/.ssh/pavel.paulik_ssh.key pavel.paulik@vps-git1.pixman.cz
 
 
-remove .git .gitignore
+**remove .git .gitignore**
 
     find web/vendor -name '*.gitignore' -delete
     find web/vendor -name '*.git' -exec rm -rf {} \;
+
+only print without devrun
+
+    find vendor -name "*.gitignore" -not -path "vendor/devrun*" -print
+    find vendor -name "*.git" -not -path "vendor/devrun*" -print
+
+remove without devrun
+
+    find vendor -name "*.gitignore" -not -path "vendor/nette*" -delete
+    find vendor -name "*.git" -not -path "vendor/nette*" -exec rm -rf {} \;
+
 
 remove file form git
 
