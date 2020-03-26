@@ -98,4 +98,11 @@ skupina www-data
 control center (chybějící), settings not found
 
     sudo apt install gnome-control-center
-  
+
+microphone
+
+    aplay foo.wav                       # play
+    arecord -l                          # list microphones
+    arecord -vv -d 30 -fdat foo.wav     # record 30 sec
+    arecord -f S16_LE -d 10 -r 16000 --device="hw:1,0" /tmp/foo-wav   # detail record
+
