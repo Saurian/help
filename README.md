@@ -76,6 +76,25 @@ remove file form git
     git rm --cached -r folder-name
     git rm --cached file
 
+commit
+
+    git revert revision...
+    - vrátí všechny změny provedené v commitu
+    - vrátí všechny soubory do stavu před commitem, ale commit zůstává nahraný, změny spadnou do change listu
+    - revert pak lze resetovat, tím se zase dostaneme zpět do commitnutého stavu
+    - resp. reset se provede revert --abort
+
+    git revert --abort      (zrušení revertování)
+
+
+
+rebase
+
+    git rebase --interactive --no-autosquash 87f4bcbecfb171f66586cd226156ae14f30ef3a9
+    - lze sloučit označené commity do jednoho
+
+
+
 
 ## Composer
 
