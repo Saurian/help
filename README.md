@@ -113,6 +113,20 @@ skupina www-data
         - sudo chmod -R 2775 /var/www/html 
         - sudo chmod -R 2755 /var/www/html
 
+Logical Volume Manager
+
+    #pvscan
+    pvcreate /dev/sda3
+    pvcreate /dev/sdc1
+    pvremove /dev/sdc1
+    
+    vgcreate /dev/sda3 vgmint
+    vgremove vgmint
+    vgreduce --removemissing vgmint
+    
+    lvcreate -L 16G temp vgmint
+    lvcreate -L 200G root vgmint
+    lvcreate -l 100%FREE backup vgmint
 
 control center (chybějící), settings not found
 
